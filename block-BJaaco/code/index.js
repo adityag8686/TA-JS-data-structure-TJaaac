@@ -3,9 +3,47 @@ let numbers = [6, 8, 10, 12, 43, 56, 98];
 let userIds = [1230, 234, 1278, 984, 763, 900];
 
 // 1. Add all the values of numbers and userIds array into the new newly created array named `collection`
-
+let length;
+if(numbers.length > userIds.length){
+   length = numbers.length;
+}
+else{
+  length = userIds.length;
+}
+console.log(length);
+let collection = [];
+for (let i = 0; i< length; i++)
+{
+  if (i<5)
+  {
+ collection.push(numbers[i] + userIds[i]);
+  }
+  else{
+    collection.push(numbers[i]);
+  }
+}
 // 2. Add all the even numbers from both arrays numbers and userIds into a newly created array named `evenCollection`
-
+let even2Collection =[];
+for (let i = 0; i< 13; i++)
+{
+  if(numbers[i] % 2 == 0 )
+  {
+ even2Collection.push(numbers[i]);
+  }
+}
+for (let i = 0; i< 13; i++)
+{
+  if(userIds[i] % 2 == 0 )
+  {
+ even2Collection.push(userIds[i]);
+  }
+}
+for (let i = 0; i< length; i++)
+{
+  
+ evenCollection.pushpush(evenCollection[i] + evenCollection[i+1]);
+  
+}
 // 3. Add all the odd numbers from both arrays numbers and userIds into a newly created array named `oddCollection`
 
 /*
