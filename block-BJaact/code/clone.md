@@ -10,12 +10,12 @@ let person2 = person;
 
 person.firstName = 'Arya';
 
-console.log(person2.firstName); // output
-console.log(person.firstName); // output
-console.log(person.lastName); // output
-console.log(person == person2); // output
-console.log(person === person2); // output
-console.log(person.lastName === person2.lastName); // output
+console.log(person2.firstName); // output Arya
+console.log(person.firstName); // output Arya
+console.log(person.lastName); // output Doe
+console.log(person == person2); // output t
+console.log(person === person2); // output t
+console.log(person.lastName === person2.lastName); // output t
 ```
 
 2. Write the output with reason:
@@ -37,17 +37,17 @@ let personTwo = { ...person };
 person.firstName = 'Arya';
 person.city = 'Navada';
 
-console.log(personTwo.firstName); // output
-console.log(person.firstName); // output
-console.log(personTwo.lastName); // output
-console.log(person.firstName === personTwo.firstName); // output
-console.log(person == personTwo); // output
-console.log(person === personTwo); // output
-console.log(person.address === personTwo.address); // output
-console.log(person.address == personTwo.address); // output
-console.log(personTwo.address.city); // output
-console.log(person.address.city); // output
-console.log(person.address.city == personTwo.address.city); // output
+console.log(personTwo.firstName); // output John
+console.log(person.firstName); // output  Arya
+console.log(personTwo.lastName); // output Doe
+console.log(person.firstName === personTwo.firstName); // output f
+console.log(person == personTwo); // output f
+console.log(person === personTwo); // output f
+console.log(person.address === personTwo.address); // output t
+console.log(person.address == personTwo.address); // output t
+console.log(personTwo.address.city); // output San Jose
+console.log(person.address.city); // output San Jose
+console.log(person.address.city == personTwo.address.city); // output f
 ```
 
 3. Write the output with reason:
@@ -78,7 +78,7 @@ console.log(person === personTwo); // output
 console.log(person.address === personTwo.address); // output
 console.log(person.address == personTwo.address); // output
 console.log(personTwo.address.city); // output
-console.log(person.address.city); // output
+console.log(person.address.city); // output Navada
 console.log(person.address.city == personTwo.address.city); // output
 ```
 
@@ -105,6 +105,7 @@ let blogs = [
 
 // Your code goes here
 ```
+let clonedBlogs =[...blogs];
 
 5. Clone the `question` variable into a new variable named `questionClone`
 
@@ -130,6 +131,7 @@ var questions = [
 
 // Your code goes here
 ```
+var questionClone = [...questions];
 
 6. Clone the `allBlogs` variable into a new variable named `allBlogsClone`
 
@@ -157,7 +159,7 @@ var allBlogs = {
 
 // Your code goes here
 ```
-
+var allBlogsClone = {...allblogs};
 7. Clone the `person` variable into a new variable named `clonedPerson`
 
 ```js
@@ -190,12 +192,14 @@ let person = [
 
 // Your code goes here
 ```
-
+let clonedPerson = [...Person];
 8. Write a function named `cloneObject` that accepts an object and returns the clone of the object
 
 ```js
-function cloneObject() {
-  // your code
+function cloneObject(user) {
+  
+  let cloneuser = {...user};
+  return cloneuser;
 }
 
 // Run the test below to check your function
