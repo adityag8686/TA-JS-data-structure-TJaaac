@@ -103,7 +103,7 @@ console.log(revert([1, 2, 3, 4])); // [4, 3, 2, 1]
 function clear(values) {
   let reverts = [];
   for( let i = values.length-1; i >= 0; i--) {
-    if (values[i] != false && values[i] != undefined && values[i] != `` && values[i] != 0 && values[i] != null){
+    if (values[i]){
       reverts.push(values[i]);
     }
   }
@@ -131,7 +131,7 @@ console.log(clear([1, 2, 3, 4, '', 0, null, undefined])); // [4, 3, 2, 1]
 */
 
 function arrayToObj(arr) {
-  let result = [];
+  let result = {};
   for (let i = 0; i< arr.length; i++){
     result[i] = arr[i];
   }
